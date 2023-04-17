@@ -27,7 +27,9 @@ p,
 figure,
 blockquote,
 dl,
-dd {
+dd,
+ul,
+ol {
 	margin: 0;
 }
 
@@ -35,10 +37,6 @@ dd {
 [role="list"] {
 	list-style: none;
 	padding: 0;
-}
-
-ul, ol {
-	margin-block: 0;
 }
 
 :where(ul[class]) ul {
