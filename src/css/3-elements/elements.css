@@ -34,14 +34,14 @@ h2 {
 
 h1 + *,
 h2 + * {
-	--stack-space: var(--space-s);
+	--stack-space-override: var(--space-s);
 }
 
 figure,
 .figure,
 figure + *,
 .figure + * {
-	--stack-space: var(--space-xl-2xl);
+	--stack-space-override: var(--space-xl-2xl);
 }
 
 figure img {
