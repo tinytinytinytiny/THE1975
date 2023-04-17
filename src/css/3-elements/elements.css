@@ -22,13 +22,11 @@ h1 {
 }
 
 h2 {
-	--wrapper-max-content-width: 30ch;
 	font-family: var(--font-serif);
 	font-size: var(--text-5);
 	font-weight: 600;
 	line-height: 1.125;
 	letter-spacing: -0.0125em;
-	text-align: center;
 	text-transform: lowercase;
 }
 

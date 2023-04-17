@@ -16,5 +16,5 @@
 }
 
 .copy-wrapper {
-	--wrapper-max-content-width: calc(41 * var(--text-1));
+	--wrapper-max-content-width: calc(40 * var(--text-1));
 }
