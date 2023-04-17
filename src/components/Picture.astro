@@ -1,7 +1,7 @@
 ---
 import { getImage } from "astro:assets";
 
-const { src, alt, class: className } = Astro.props;
+const { src, alt, loading = 'lazy' class: className } = Astro.props;
 const image = await src;
 const webp = await getImage({ src: image.default, format: "webp" });
 const png = await getImage({ src: image.default, format: "png" });
@@ -9,5 +9,5 @@ const png = await getImage({ src: image.default, format: "png" });
 
 <picture class={className}>
 	<source srcset={webp.src} type="image/webp" />
-	<img src={png.src} width={image.default.width} height={image.default.height} alt={alt} />
+	<img src={png.src} width={image.default.width} height={image.default.height} loading={loading} decoding="async" alt={alt} />
 </picture>
