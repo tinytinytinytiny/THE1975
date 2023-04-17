@@ -3,7 +3,7 @@ const props = Astro.props;
 ---
 
 <h2 class="heading-anchor" {...props}>
-	<a><slot /></a>
+	<a href={`#${props.id}`}><slot /></a>
 </h2>
 
 <style>
@@ -15,25 +15,3 @@ const props = Astro.props;
 		text-decoration: underline;
 	}
 </style>
-
-<script>
-	document
-		.querySelectorAll('.heading-anchor')
-		.forEach((heading) => {
-			const anchor = heading.querySelector('a');
-
-			if (heading.hasAttribute('id')) {
-				anchor.href = `#${heading.id}`;
-			} else {
-				const slugify = (string) => string
-					.toLowerCase()
-					.replace(/[^a-z0-9]/gi, ' ')
-					.split(' ')
-					.filter(x => x.length)
-					.join('-');
-				const slug = slugify(anchor.textContent);
-				heading.id = slug;
-				anchor.href = `#${slug}`;
-			}
-		});
-</script>

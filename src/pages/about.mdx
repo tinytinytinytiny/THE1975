@@ -8,7 +8,9 @@ import Album from "@components/Album.astro";
 import Reel from "@components/Reel.astro";
 import albums from "@data/albums.json";
 import { findFileInGlob } from "@utils";
+
 export const components = {h2: H2};
+export const albumCovers = import.meta.glob("../assets/images/albums/*");
 
 <figure class="full-bleed">
     <Picture src={import('@assets/images/band-members.jpeg')} loading="eager" alt="All four members of The 1975, standing side-by-side" />
@@ -39,18 +41,15 @@ The band first appeared as The 1975 in January 2012, in the run up to the releas
 <Reel label="Albums by The 1975">
 	<ol reversed role="list">
 		{
-            (() => {
-                const albumCovers = import.meta.glob("../assets/images/albums/*");
-                return [...albums].reverse().map((album) => (
-                    <li>
-                        <Album
-                            title={album.title}
-                            img={findFileInGlob(albumCovers, album.img)}
-                            url={album.url}
-                        />
-                    </li>
-                ));
-            })()
+            [...albums].reverse().map((album) => (
+                <li>
+                    <Album
+                        title={album.title}
+                        img={findFileInGlob(albumCovers, album.img)}
+                        url={album.url}
+                    />
+                </li>
+            ))
 		}
 	</ol>
 </Reel>
