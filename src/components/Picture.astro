@@ -1,7 +1,7 @@
 ---
 import { getImage } from "astro:assets";
 
-const { src, alt, loading = 'lazy' class: className } = Astro.props;
+const { src, alt, loading = 'lazy', class: className } = Astro.props;
 const image = await src;
 const webp = await getImage({ src: image.default, format: "webp" });
 const png = await getImage({ src: image.default, format: "png" });
