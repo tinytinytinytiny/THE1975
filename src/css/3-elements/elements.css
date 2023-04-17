@@ -44,7 +44,7 @@ figure + *,
 	--stack-space: var(--space-xl-2xl);
 }
 
-figure > img {
+figure img {
 	margin-inline: auto;
 }
 
