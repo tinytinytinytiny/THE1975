@@ -10,6 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.3.0"
+    "@astrojs/mdx": "^0.19.0",
+    "@astrojs/tailwind": "^3.1.1",
+    "@jasikpark/astro-svg-loader": "^0.1.0",
+    "@mertasan/tailwindcss-variables": "^2.6.1",
+    "astro": "^2.3.0",
+    "postcss-import": "^15.1.0",
+    "postcss-import-ext-glob": "^2.1.1",
+    "tailwindcss": "^3.3.1",
+    "tailwindcss-logical": "^3.0.0"
   }
 }

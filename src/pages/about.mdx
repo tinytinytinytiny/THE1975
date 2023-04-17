@@ -1,0 +1,58 @@
+---
+layout: '@layouts/Base.astro'
+title: 'About'
+---
+import Picture from '@components/Picture.astro';
+import Album from "@components/Album.astro";
+import Reel from "@components/Reel.astro";
+import albums from "@data/albums.json";
+import { findFileInGlob } from "@utils";
+
+<figure class="full-bleed">
+    <Picture src={import('@assets/images/band-members.jpeg')} alt="All four members of The 1975, standing side-by-side" />
+</figure>
+
+The 1975 are a British band consisting of four members, (from left to right) Ross MacDonald, Adam Hann, Matty Healy, and George Daniel, from Manchester, England. The members of the band met during high school and started playing together in 2002. They went by an array of different names throughout their career, such as *Drive Like I Do* and *Bigsleep*, until settling on “The 1975.” The name, *The 1975*, was inspired by a Jack Kerouac poetry book that had “1 June, The 1975” written on the back. During the early days of the band, they would perform punk covers in local clubs until they started to write music themselves.
+
+Before releasing their debut album in 2013, The 1975 released a set of extended plays. The EP's were released throughout 2012 and 2013 and were titled *Facedown*, *Sex*, *Music for Cars*, and *IV*. Their self-title debut album dropped on September 2nd, 2013 and topped the UK Albums Chart on September 8th, 2013, selling 31,538 copies in it's first week. Over in the United States the album debuted at No. 28 on the Billboard 200 and sold around 15,000 in it's first week. The 1975 has a total of 16 tracks, including hits like *Girls*, *Chocolate*, and *The City*. Before the release of the album, the band toured to build hype for the release, opening up for bands like The Neighborhood and The Rolling Stones, while also playing festivals like Reading and Leeds. Following the release of their debut album toured the UK, Europe, North America, Australia, and New Zealand. They continued to tour throughout 2014 playing headlining concerts, as well as festivals.
+
+## History
+
+Matthew Healy (son of Denise Welch and Tim Healy), Ross MacDonald, Adam Hann and George Daniel met at Wilmslow High School near Manchester as teenagers and began to play music in 2002.
+
+> There was this idealistic hippy council worker who started to put on these gigs for kids, to form bands. I remember the guitarist Adam Hann came up to me and said he wanted to play one of these shows. We started playing, doing covers of punk songs and pop songs and just started out doing that. Then once we eventually wrote a song, I decided, well, this is a lot better than going to work—or going to school, for that matter. We started from then and we’ve been making music together since we were about 15—George was 14, actually, when we started.
+
+After Hann invited the members to form a band, they passed their early days covering punk songs in a local club. Healy was originally the drummer, but took over vocals after the previous singer left to start another band. Daniel was recruited as the new drummer to complete the final line-up.
+
+> [We met] in school. It started out like there was this girl in my form who was going out with a guy in the year above, Adam Hann. And he came up to me and said do I want to play drums in his band because there’s this thing that goes on at the Macclesfield Senior Citizen Hall where they let kids in to do a gig. So I was like, alright. Me on drums didn’t work, so then we found George [Daniel] who’s the only kid who can play drums, he’s like the weirdest kid ever. That worked and that was ten years ago.
+
+Having previously performed and released material under various guises including *Talkhouse*, *The Slowdown*, *Bigsleep*, and *Drive Like I Do*, the band eventually settled on the name The 1975. Healy recounts that the name was inspired by scribblings found in the back page of an old Beat poetry book dated “1 June, The 1975”:
+
+> I met an artist on Holiday. It sounds a bit more bohemian, idealistic than maybe it was but I met him and ended up leaving with a book that must of been treated almost like a diary by a previous owner, so when I read it there was all these mad scribblings and notes, and the person had dated it “the 1st of June The 1975.” Then when it came to naming the band it just seemed like quite an appropriate title, you know.
+
+The band first appeared as The 1975 in January 2012, in the run up to the release of their first EP and after signing to UK based Indie label Dirty Hit. They performed as The 1975 for the first time in February as a support act for General Fiasco on their nationwide tour.
+
+## Discography
+
+<Reel label="Albums by The 1975">
+	<ol reversed role="list">
+		{
+            (() => {
+                const albumCovers = import.meta.glob("../assets/images/albums/*");
+                return [...albums].reverse().map((album) => (
+                    <li>
+                        <Album
+                            title={album.title}
+                            img={findFileInGlob(albumCovers, album.img)}
+                            url={album.url}
+                        />
+                    </li>
+                ));
+            })()
+		}
+	</ol>
+</Reel>
+
+The 1975 has released five studio albums, two live albums, five extended plays, 35 music videos and 34 singles. The band’s debut album, *The 1975 (2013)*, debuted at number one on the UK Albums Chart and was certified Platinum by the British Phonographic Industry. Its follow-up, *I Like It When You Sleep, for You Are So Beautiful yet So Unaware of It*, was released on 26 February 2016 and became their second successive chart topper.
+
+Subsequent albums *A Brief Inquiry into Online Relationships (2018)* and *Notes on a Conditional Form (2020)* both reached number one as well. The band’s fifth album *Being Funny in a Foreign Language* followed on 14 October 2022.

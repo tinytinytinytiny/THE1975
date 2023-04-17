@@ -1,0 +1,7 @@
+---
+const { class: className, label } = Astro.props;
+---
+
+<section class:list={["reel", "figure", "full-bleed", className]} aria-label={label} tabindex="0">
+	<slot />
+</section>

@@ -1,0 +1,25 @@
+@layer components {
+	.frame {
+		--frame-shadow-depth: 4px;
+		margin-bottom: calc(-1 * var(--frame-shadow-depth));
+		position: relative;
+	}
+
+	.frame::before {
+		background-color: #000;
+		border-bottom-left-radius: var(--frame-shadow-depth);
+		border-bottom-right-radius: var(--frame-shadow-depth);
+		content: '';
+		display: block;
+		top: 100%;
+		right: var(--frame-shadow-depth);
+		bottom: calc(-1 * var(--frame-shadow-depth));
+		left: var(--frame-shadow-depth);
+		position: absolute;
+	}
+
+	.frame > * {
+		border: 2px solid #000;
+		border-radius: 4px;
+	}
+}

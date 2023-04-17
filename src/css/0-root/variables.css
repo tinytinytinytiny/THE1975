@@ -1,0 +1,9 @@
+@layer base {
+	:root {
+		--font-sans: 'Schibsted Grotesk', sans-serif;
+		--font-serif: 'Montagu Slab', serif;
+		--default-gutter: var(--space-l);
+		--default-rack-space: 1em;
+		--default-stack-space: 1.5em;
+	}
+}

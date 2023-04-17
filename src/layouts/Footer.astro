@@ -1,0 +1,41 @@
+---
+import Svg from "@jasikpark/astro-svg-loader";
+---
+
+<footer class="wrapper">
+	<ul class="cluster gap-s justify-center" role="list">
+		<li>
+			<a class="icon-link" href="/" aria-label="TikTok">
+				<Svg src={import("@assets/icons/tiktok.svg?raw")} />
+			</a>
+		</li>
+		<li>
+			<a class="icon-link" href="/" aria-label="Instagram">
+				<Svg src={import("@assets/icons/instagram.svg?raw")} />
+			</a>
+		</li>
+		<li>
+			<a class="icon-link" href="/" aria-label="Twitter">
+				<Svg src={import("@assets/icons/twitter.svg?raw")} />
+			</a>
+		</li>
+		<li>
+			<a class="icon-link" href="/" aria-label="Facebook">
+				<Svg src={import("@assets/icons/facebook.svg?raw")} />
+			</a>
+		</li>
+	</ul>
+	<p class="mbs-2xs text-weak">{`Copyright ${new Date().getFullYear()}. All rights reserved.`}</p>
+	<p>
+		<a href="https://replit.com/@tinytinytiny/THE1975">Source code</a>
+	</p>
+</footer>
+
+<style>
+	footer {
+		font-size: var(--text-0);
+		margin-block-start: var(--space-2xl-3xl);
+		padding-block: var(--space-xl-2xl);
+		text-align: center;
+	}
+</style>

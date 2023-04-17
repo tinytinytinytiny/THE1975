@@ -1,0 +1,15 @@
+---
+import Base from "@layouts/Base.astro";
+import Events from "@components/Events.astro";
+import eventSchedule from "@data/events.json";
+---
+
+<Base title="Tours">
+	<Events list={eventSchedule.slice(0, 5)} />
+	<div class="stack stack-space-xs mbs-xl text-center">
+		<p>Get notified when new events are announced in your area</p>
+		<p>
+			<a class="button" href="/">Follow the 1975</a>
+		</p>
+	</div>
+</Base>

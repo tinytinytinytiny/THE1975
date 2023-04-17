@@ -1,0 +1,18 @@
+@layer base {
+
+	*,
+	*::before,
+	*::after {
+		--stack-space-override: var(--stack-space);
+	}
+}
+
+@layer components {
+	.stack {
+		--stack-space: var(--default-stack-space);
+	}
+
+	.stack > * + * {
+		margin-block-start: var(--stack-space-override);
+	}
+}

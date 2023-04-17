@@ -1,15 +1,17 @@
 ---
+import Base from "@layouts/Base.astro";
+import Landing from "@components/Landing.astro";
+import Events from "@components/Events.astro";
+import eventSchedule from "@data/events.json";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base>
+	<Landing slot="header" />
+	<h2>Upcoming Tours</h2>
+	<Events list={eventSchedule.slice(0, 5)} />
+	<p class="text-center text-2 uppercase">
+		<a href="/tours.html">
+			All upcoming tours <span aria-hidden="true">&rarr;</span>
+		</a>
+	</p>
+</Base>

@@ -1,0 +1,57 @@
+---
+const sitemap = [
+	{
+		title: "Home",
+		url: "/",
+	},
+	{
+		title: "Tours",
+		url: "/tours",
+	},
+	{
+		title: "About",
+		url: "/about",
+	},
+];
+---
+
+<header class="masthead wrapper">
+	<div class="spread gap-y-xs">
+		<a class="masthead__name" href="/">THE1975</a>
+		<nav>
+			<ul class="cluster gap-y-xs">
+				{
+					sitemap.map((item) => (
+						<li>
+							<a href={item.url} aria-current={item.url === Astro.url.pathname ? "page" : "false"}>
+								{item.title}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.masthead {
+		line-height: 1;
+		padding-block-start: var(--space-m);
+		text-transform: uppercase;
+	}
+
+	@media screen and (min-width: theme("screens.md")) and (min-height: theme("screens.md")) {
+		.masthead {
+			position: sticky;
+			top: 0;
+			z-index: 10;
+		}
+	}
+
+	.masthead__name {
+		font-size: var(--text-2);
+		font-weight: 900;
+		text-decoration: none;
+	}
+</style>

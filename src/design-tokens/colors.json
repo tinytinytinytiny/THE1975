@@ -1,0 +1,17 @@
+{
+	"background": {
+		"backdrop": "#000",
+		"body": "#2a1b76",
+		"surface": "#5B48AC"
+	},
+	"brand": {
+		"primary": "#a3ff7e",
+		"secondary": "#F0BDFF"
+	},
+	"separator": "rgba(206, 200, 237, 0.25)",
+	"text": {
+		"DEFAULT": "#f7f5ff",
+		"weak": "#c4bee5",
+		"inverted": "#000"
+	}
+}

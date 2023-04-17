@@ -1,0 +1,52 @@
+---
+import "../css/global.css";
+import Masthead from "@layouts/Masthead.astro";
+import Footer from "@layouts/Footer.astro";
+import SkipLink from "@components/SkipLink.astro";
+
+const { title, frontmatter } = Astro.props;
+
+let pageTitle;
+if (frontmatter) {
+	pageTitle = frontmatter.title;
+} else if (title) {
+	pageTitle = title;
+}
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="/fonts.css" />
+		<title>{pageTitle ? `${pageTitle} - The 1975` : "The 1975"}</title>
+	</head>
+	<body>
+		<div class="bg"></div>
+		<div class="layout">
+			<SkipLink />
+			<Masthead />
+			<main id="main-content" tabindex="-1">
+				<slot name="header">
+					<header class="text-center plb-3xl-4xl">
+						<h1>{pageTitle}</h1>
+					</header>
+				</slot>
+				<div class="wrapper copy-wrapper stack">
+					<slot />
+				</div>
+			</main>
+			<Footer />
+		</div>
+		<script is:inline>
+			if ("serviceWorker" in navigator) {
+				navigator.serviceWorker.register("/service-worker.js").then(
+					(registration) => console.log("Service worker registration succeeded:", registration),
+					(error) => console.error(`Service worker registration failed: ${error}`)
+				);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+h1 {
+	font-size: max(3.14rem, 1rem + 16vw);
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+	@media (forced-colors: none) {
+		h1 {
+			-webkit-background-clip: text;
+			background-clip: text;
+			background-color: var(--color-text);
+			background-image: url('/images/Grunge-03.svg');
+			background-repeat: repeat;
+			background-size: 50%;
+			color: transparent;
+			mix-blend-mode: screen;
+		}
+	}
+}
+
+h2 {
+	--wrapper-max-content-width: 30ch;
+	font-family: var(--font-serif);
+	font-size: var(--text-5);
+	font-weight: 600;
+	line-height: 1.125;
+	letter-spacing: -0.0125em;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+h1 + *,
+h2 + * {
+	--stack-space: var(--space-s);
+}
+
+figure,
+.figure,
+figure + *,
+.figure + * {
+	--stack-space: var(--space-xl-2xl);
+}
+
+figure > img {
+	margin-inline: auto;
+}
+
+blockquote {
+	color: var(--color-brand-secondary);
+	font-style: italic;
+	padding-inline-start: var(--space-l-xl);
+	position: relative;
+	quotes: "“" "”";
+}
+
+blockquote::before {
+	content: open-quote;
+	font-size: var(--text-5);
+	inset-inline-start: 0;
+	line-height: 0.75;
+	margin-inline-start: -0.1em;
+	position: absolute;
+}
+
+a {
+	color: inherit;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+small {
+	font-size: var(--text-0);
+}

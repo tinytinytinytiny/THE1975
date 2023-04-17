@@ -1,0 +1,68 @@
+---
+import Picture from "@components/Picture.astro";
+
+const { img, url, title } = Astro.props;
+---
+
+<div class="frame">
+	<a class="album" href={url}>
+		<Picture class="pointer-events-none" src={img} alt="" />
+		<p class="album__title">{title}</p>
+	</a>
+</div>
+
+<style>
+	.album {
+		display: block;
+		inline-size: clamp(144px, 54vw, 480px);
+		overflow: hidden;
+		position: relative;
+	}
+
+	.album:focus {
+		outline: none;
+	}
+
+	.album__title {
+		background-color: var(--color-text-inverted);
+		color: var(--color-text);
+		inset-block-end: 0;
+		inset-inline: 0;
+		font-size: var(--step-0);
+		line-height: 1.25;
+		max-block-size: 100%;
+		padding: var(--space-xs-s);
+		position: absolute;
+		text-transform: uppercase;
+		transform: translateY(100%);
+	}
+
+	@media screen and (min-width: 30rem) {
+		.album__title {
+			font-size: inherit;
+		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.album__title {
+			transition: transform 0.15s ease-in-out;
+		}
+	}
+
+	.album:active {
+		transform: translateY(4px);
+	}
+
+	.album:focus .album__title {
+		background-color: var(--color-text);
+		color: var(--color-text-inverted);
+		outline: 2px dashed;
+		outline-offset: -4px;
+	}
+
+	.album:hover .album__title,
+	.album:active .album__title,
+	.album:focus .album__title {
+		transform: none;
+	}
+</style>

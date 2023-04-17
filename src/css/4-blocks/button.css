@@ -1,0 +1,45 @@
+@layer components {
+	.button {
+		background-color: var(--color-text);
+		border: 2px solid;
+		border-radius: 9999px;
+		color: var(--color-text-inverted);
+		display: inline-block;
+		font-size: var(--text-0);
+		font-weight: 700;
+		letter-spacing: 0.0125em;
+		line-height: 1;
+		padding-block: 0.75em;
+		padding-inline: 2em;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.button-inverted {
+		background-color: var(--color-text-inverted);
+		color: var(--color-text);
+	}
+
+	.button::selection {
+		background-color: var(--color-background-body);
+		color: var(--color-text);
+	}
+
+	.button:hover {
+		background-color: transparent;
+		color: var(--color-text);
+	}
+
+	.button-inverted:hover {
+		color: var(--color-text-inverted);
+	}
+
+	.button:focus {
+		outline-color: var(--color-text);
+	}
+
+	.button-inverted:focus {
+		outline-color: var(--color-text-inverted);
+	}
+}

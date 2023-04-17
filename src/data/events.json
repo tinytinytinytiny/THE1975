@@ -1,0 +1,62 @@
+[
+	{
+		"date": "2023-04-14",
+		"venue": "Aware Super Theatre",
+		"location": "Sydney, Australia"
+	},
+	{
+		"date": "2023-04-15",
+		"venue": "Riverstage",
+		"location": "Brisbane, Australia"
+	},
+	{
+		"date": "2023-04-16",
+		"venue": "Qudos Bank Arena",
+		"location": "Sydney, Australia"
+	},
+	{
+		"date": "2023-04-19",
+		"venue": "TSB Arena",
+		"location": "Wellington, New Zealand"
+	},
+	{
+		"date": "2023-04-21",
+		"venue": "Spark Arena",
+		"location": "Auckland, New Zealand"
+	},
+	{
+		"date": "2023-04-24",
+		"venue": "Tokyo Garden Theatre",
+		"location": "Tokyo, Tokyo"
+	},
+	{
+		"date": "2023-04-26",
+		"venue": "PIA Arena",
+		"location": "Yokohama, Japan"
+	},
+	{
+		"date": "2023-04-27",
+		"venue": "PIA Arena",
+		"location": "Yokohama, Kanagawa"
+	},
+	{
+		"date": "2023-04-29",
+		"venue": "Aichi Sky Expo",
+		"location": "Nagoya, Japan"
+	},
+	{
+		"date": "2023-04-30",
+		"venue": "Jo Hall",
+		"location": "Osaka, Japan"
+	},
+	{
+		"date": "2023-05-03",
+		"venue": "Mall of Asia Arena",
+		"location": "Pasay, Metro Manila"
+	},
+	{
+		"date": "2023-05-04",
+		"venue": "Mall of Asia Arena",
+		"location": "Pasay, Metro Manila"
+	}
+]

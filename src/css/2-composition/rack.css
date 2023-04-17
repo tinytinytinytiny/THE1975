@@ -1,0 +1,14 @@
+@layer components {
+	.rack {
+		--rack-space: var(--default-rack-space);
+	}
+
+	.rack > * {
+		border-block-end: 1px solid var(--color-separator);
+		padding-block-end: var(--rack-space);
+	}
+
+	.rack > * + * {
+		padding-block-start: var(--rack-space);
+	}
+}

@@ -1,0 +1,31 @@
+@layer components {
+	.reel {
+		background-color: var(--color-background-surface);
+		overflow-x: auto;
+		padding-block: var(--space-s-m);
+		scroll-snap-type: inline proximity;
+		text-align: center;
+	}
+
+	.reel > :first-child {
+		max-inline-size: none;
+		white-space: nowrap;
+	}
+
+	.reel.full-bleed > :first-child::before,
+	.reel.full-bleed > :first-child::after {
+		content: '';
+		display: inline-block;
+		inline-size: var(--wrapper-padding);
+	}
+
+	.reel > :first-child > * {
+		display: inline-block;
+		scroll-snap-align: center;
+		white-space: normal;
+	}
+
+	.reel > :first-child > * + * {
+		margin-inline-start: var(--space-s-m);
+	}
+}
