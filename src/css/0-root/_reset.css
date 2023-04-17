@@ -37,7 +37,7 @@ dd {
 	padding: 0;
 }
 
-:where(ul, ol) {
+ul, ol {
 	margin-block: 0;
 }
 
