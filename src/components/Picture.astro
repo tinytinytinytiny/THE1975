@@ -3,13 +3,11 @@ import { getImage } from "astro:assets";
 
 const { src, alt, class: className } = Astro.props;
 const image = await src;
-const avif = await getImage({ src: image.default, format: "avif" });
 const webp = await getImage({ src: image.default, format: "webp" });
 const png = await getImage({ src: image.default, format: "png" });
 ---
 
 <picture class={className}>
-	<source srcset={avif.src} type="image/avif" />
 	<source srcset={webp.src} type="image/webp" />
 	<img src={png.src} width={image.default.width} height={image.default.height} alt={alt} />
 </picture>
