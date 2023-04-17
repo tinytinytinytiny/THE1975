@@ -4,14 +4,7 @@ import Masthead from "@layouts/Masthead.astro";
 import Footer from "@layouts/Footer.astro";
 import SkipLink from "@components/SkipLink.astro";
 
-const { title, frontmatter } = Astro.props;
-
-let pageTitle;
-if (frontmatter) {
-	pageTitle = frontmatter.title;
-} else if (title) {
-	pageTitle = title;
-}
+const { title } = Astro.props;
 ---
 
 <html lang="en">
@@ -21,7 +14,7 @@ if (frontmatter) {
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="/fonts.css" />
-		<title>{pageTitle ? `${pageTitle} - The 1975` : "The 1975"}</title>
+		<title>{title ? `${title} - The 1975` : "The 1975"}</title>
 	</head>
 	<body>
 		<div class="layout">
@@ -30,7 +23,7 @@ if (frontmatter) {
 			<main id="main-content" tabindex="-1">
 				<slot name="header">
 					<header class="text-center plb-3xl-4xl">
-						<h1>{pageTitle}</h1>
+						<h1>{title}</h1>
 					</header>
 				</slot>
 				<div class="wrapper copy-wrapper stack">

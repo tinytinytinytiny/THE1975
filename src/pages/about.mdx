@@ -1,12 +1,14 @@
 ---
-layout: '@layouts/Base.astro'
+layout: '@layouts/Article.astro'
 title: 'About'
 ---
-import Picture from '@components/Picture.astro';
+import H2 from "@components/H2.astro";
+import Picture from "@components/Picture.astro";
 import Album from "@components/Album.astro";
 import Reel from "@components/Reel.astro";
 import albums from "@data/albums.json";
 import { findFileInGlob } from "@utils";
+export const components = {h2: H2};
 
 <figure class="full-bleed">
     <Picture src={import('@assets/images/band-members.jpeg')} loading="eager" alt="All four members of The 1975, standing side-by-side" />
