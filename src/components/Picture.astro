@@ -11,5 +11,5 @@ const png = await getImage({ src: image.default, format: "png" });
 <picture class={className}>
 	<source srcset={avif.src} type="image/avif" />
 	<source srcset={webp.src} type="image/webp" />
-	<img src={png.src} alt={alt} />
+	<img src={png.src} width={image.default.width} height={image.default.height} alt={alt} />
 </picture>
