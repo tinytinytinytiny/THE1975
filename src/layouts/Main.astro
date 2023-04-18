@@ -3,12 +3,14 @@ import Base from "@layouts/Base.astro";
 import PageTitle from "@layouts/partials/PageTitle.astro";
 import Wrapper from "@layouts/partials/Wrapper.astro";
 
-const { frontmatter } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<Base title={frontmatter.title}>
-	<PageTitle>{frontmatter.title}</Pagetitle>
-	<Wrapper class="leading-relaxed">
+<Base title={title}>
+	<slot name="header">
+		<PageTitle>{title}</PageTitle>
+	</slot>
+	<Wrapper>
 		<slot />
 	</Wrapper>
 </Base>

@@ -3,6 +3,7 @@ const plugin = require('tailwindcss/plugin');
 
 const color = require('./src/design-tokens/colors.json');
 const fontSize = require('./src/design-tokens/font-sizes.cjs');
+const fontFamily = require('./src/design-tokens/font-family.json');
 const spacing = require('./src/design-tokens/spacing.cjs');
 const screens = require('./src/design-tokens/screen-sizes.json');
 
@@ -50,6 +51,7 @@ module.exports = {
 		screens,
 		colors: getTokens(color, 'color'),
 		fontSize: getTokens(fontSize, 'text'),
+		fontFamily: getTokens(fontFamily, 'font'),
 		spacing: getTokens(spacing, 'space'),
 		margin: ({ theme }) => ({
 			auto: 'auto',
@@ -66,9 +68,10 @@ module.exports = {
 		},
 		variables: {
 			DEFAULT: {
+				color,
+				font: fontFamily,
 				space: spacing,
-				text: fontSize,
-				color
+				text: fontSize
 			}
 		}
 	},

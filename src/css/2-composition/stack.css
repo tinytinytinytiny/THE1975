@@ -1,9 +1,20 @@
 @layer base {
-
 	*,
 	*::before,
 	*::after {
 		--stack-space-override: var(--stack-space);
+	}
+
+	h1 + *,
+	h2 + * {
+		--stack-space-override: var(--space-s);
+	}
+
+	figure,
+	.figure,
+	figure + *,
+	.figure + * {
+		--stack-space-override: var(--space-xl-2xl);
 	}
 }
 

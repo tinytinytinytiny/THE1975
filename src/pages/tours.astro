@@ -1,10 +1,10 @@
 ---
-import Base from "@layouts/Base.astro";
+import Main from "@layouts/Main.astro";
 import Events from "@components/Events.astro";
 import eventSchedule from "@data/events.json";
 ---
 
-<Base title="Tours">
+<Main title="Tours">
 	<Events list={eventSchedule} />
 	<div class="stack stack-space-xs mbs-xl text-center">
 		<p>Get notified when new events are announced in your area</p>
@@ -12,4 +12,4 @@ import eventSchedule from "@data/events.json";
 			<a class="button" href="/">Follow the 1975</a>
 		</p>
 	</div>
-</Base>
+</Main>

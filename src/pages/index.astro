@@ -1,12 +1,30 @@
 ---
-import Base from "@layouts/Base.astro";
-import Landing from "@components/Landing.astro";
+import Main from "@layouts/Main.astro";
+import PaintBrushBorder from "@components/PaintBrushBorder.astro";
 import Events from "@components/Events.astro";
 import eventSchedule from "@data/events.json";
 ---
 
-<Base>
-	<Landing slot="header" />
+<Main>
+	<header class="landing" slot="header">
+		<PaintBrushBorder class="fill-background-backdrop">
+			<div class="bg-backdrop text-center stack plb-s isolate">
+				<hgroup class="wrapper stack text-3">
+					<h1 class="full-bleed">
+						<span role="text">
+							<span>The</span><span class="visually-hidden">&#32;</span><span>1975</span>
+						</span>
+					</h1>
+					<p class="font-[320] font-serif leading-tight">
+						being funny <i class="not-italic text-brand-primary">in a</i> foreign language
+					</p>
+				</hgroup>
+				<p class="wrapper">
+					<a class="button cta" href="/">Get the latest album</a>
+				</p>
+			</div>
+		</PaintBrushBorder>
+	</header>
 	<h2 class="text-center">Upcoming Tours</h2>
 	<Events list={eventSchedule.slice(0, 5)} />
 	<p class="text-center text-2 uppercase">
@@ -14,4 +32,26 @@ import eventSchedule from "@data/events.json";
 			All upcoming tours <span aria-hidden="true">&rarr;</span>
 		</a>
 	</p>
-</Base>
+</Main>
+
+<style>
+	.landing {
+		padding-block: var(--space-xl-2xl) var(--space-3xl-4xl);
+	}
+
+	@media (forced-colors: active) {
+		.fill-background-backdrop {
+			fill: transparent;
+		}
+	}
+
+	.cta {
+		background-color: var(--color-brand-primary);
+		border-color: transparent;
+		font-size: inherit;
+	}
+
+	.cta:hover {
+		border-color: currentColor;
+	}
+</style>
