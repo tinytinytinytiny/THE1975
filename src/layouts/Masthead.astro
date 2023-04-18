@@ -2,16 +2,16 @@
 const sitemap = [
 	{
 		title: "Home",
-		url: "/",
+		url: "/"
 	},
 	{
 		title: "Tours",
-		url: "/tours",
+		url: "/tours"
 	},
 	{
 		title: "About",
-		url: "/about",
-	},
+		url: "/about"
+	}
 ];
 ---
 
@@ -27,7 +27,11 @@ const sitemap = [
 				{
 					sitemap.map((item) => (
 						<li>
-							<a href={item.url} aria-current={item.url === Astro.url.pathname ? "page" : "false"}>
+							<a
+								class="masthead__navigation-link"
+								href={item.url}
+								aria-current={item.url === Astro.url.pathname ? "page" : "false"}
+							>
 								{item.title}
 							</a>
 						</li>
@@ -57,5 +61,18 @@ const sitemap = [
 		font-size: var(--text-2);
 		font-weight: 900;
 		text-decoration: none;
+	}
+
+	.masthead__navigation-link {
+		text-decoration: none;
+	}
+
+	.masthead__navigation-link:hover {
+		text-decoration: underline;
+	}
+
+	.masthead__navigation-link[aria-current="page"] {
+		text-decoration: underline;
+		text-decoration-color: var(--color-brand-primary);
 	}
 </style>
