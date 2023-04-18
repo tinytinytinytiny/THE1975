@@ -6,10 +6,12 @@ import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    assets: true
-  },
-  integrations: [tailwind(), mdx()],
-  output: "server",
-  adapter: netlify()
+	experimental: {
+		assets: true
+	},
+	integrations: [tailwind({
+		config: { applyBaseStyles: false }
+	}), mdx()],
+	output: "server",
+	adapter: netlify()
 });
