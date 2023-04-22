@@ -11,6 +11,7 @@ import { findFileInGlob } from "@utils";
 
 export const components = {h2: H2};
 export const albumCovers = import.meta.glob("../assets/images/albums/*");
+export const prerender = true;
 
 <figure class="full-bleed">
     <Picture src={import('@assets/images/band-members.jpeg')} loading="eager" alt="All four members of The 1975, standing side-by-side" />
