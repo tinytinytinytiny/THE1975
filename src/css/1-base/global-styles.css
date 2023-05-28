@@ -4,7 +4,7 @@
 		--default-stack-space: 1.5em;
 		--default-rack-space: 1em;
 	}
-	
+
 	* {
 		text-underline-position: under;
 	}
@@ -28,7 +28,7 @@
 		color: var(--color-text);
 		font-family: var(--font-sans);
 		font-size: var(--text-1);
-		line-height: 1.414;
+		line-height: 1.5;
 	}
 
 	.layout {
@@ -46,7 +46,7 @@
 		line-height: 1;
 		text-transform: uppercase;
 	}
-	
+
 	@supports (background-clip: text) or (-webkit-background-clip: text) {
 		@media (forced-colors: none) {
 			h1 {
@@ -61,7 +61,7 @@
 			}
 		}
 	}
-	
+
 	h2 {
 		font-family: var(--font-serif);
 		font-size: var(--text-5);
@@ -74,12 +74,12 @@
 	a {
 		color: inherit;
 	}
-	
+
 	a:hover,
 	a:focus {
 		text-decoration: none;
 	}
-	
+
 	small {
 		font-size: var(--text-0);
 	}
@@ -91,7 +91,7 @@
 		position: relative;
 		quotes: "“" "”";
 	}
-	
+
 	blockquote::before {
 		content: open-quote;
 		font-size: var(--text-5);
