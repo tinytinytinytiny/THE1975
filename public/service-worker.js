@@ -2,11 +2,8 @@ const cacheName = 'my-cache';
 
 const filesToCache = [
 	'/fonts.css',
-	'/fonts/schibsted-grotesk-v2-latin-regular.woff2',
-	'/fonts/schibsted-grotesk-v2-latin-italic.woff2',
-	'/fonts/schibsted-grotesk-v2-latin-700.woff2',
-	'/fonts/schibsted-grotesk-v2-latin-700italic.woff2',
-	'/fonts/schibsted-grotesk-v2-latin-900.woff2',
+	'/fonts/SchibstedGrotesk.woff2',
+	'/fonts/SchibstedGrotesk-Italic.woff2',
 	'/fonts/montagu-slab-variable.woff2',
 	'/images/Grunge-03.svg'
 ];
