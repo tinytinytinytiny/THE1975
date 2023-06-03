@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 
 <Base title={frontmatter.title}>
 	<PageTitle>{frontmatter.title}</PageTitle>
-	<Wrapper class="leading-[1.75]">
+	<Wrapper class="md:leading-[1.75]">
 		<slot />
 	</Wrapper>
 </Base>
